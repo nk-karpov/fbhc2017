@@ -70,7 +70,7 @@ fun bitCount(x: Long): Int {
 fun get(x: Int, y: Int, r: Int, points: List<Point>): Long {
     var res = 0.toLong()
     for ((i, p) in points.withIndex()) {
-        if (p.x >= x && p.x <= x + r && p.y >= y && p.y <= y + r) res += 1 shl i
+        if (p.x >= x && p.x <= x + r && p.y >= y && p.y <= y + r) res += 1.toLong() shl i
     }
     return res
 }
