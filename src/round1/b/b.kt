@@ -4,6 +4,7 @@ import java.io.BufferedReader
 import java.io.FileReader
 import java.io.FileWriter
 import java.io.PrintWriter
+import java.lang.Long.bitCount
 import kotlin.system.measureNanoTime
 import kotlin.system.measureTimeMillis
 
@@ -53,18 +54,6 @@ fun solve(input: BufferedReader, output: PrintWriter) {
                 }
             }.max()
     output.println(res)
-}
-
-fun bitCount(x: Long): Int {
-    var t = x
-    var res = 0
-    while (t > 0) {
-        if (t % 2 == 1.toLong()) {
-            res++
-        }
-        t /= 2
-    }
-    return res
 }
 
 fun get(x: Int, y: Int, r: Int, points: List<Point>): Long {
