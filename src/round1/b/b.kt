@@ -43,7 +43,7 @@ fun solve(input: BufferedReader, output: PrintWriter) {
                         .map { y ->
                             get(x, y, r, points)
                         }
-            }
+            }.distinct()
     val res =
             masks.flatMap {
                 x ->
