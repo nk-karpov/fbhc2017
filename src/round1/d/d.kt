@@ -92,8 +92,8 @@ fun solve(input: BufferedReader, output: PrintWriter) {
         val m2 = count(m - 1 + pen - s, n - 1)
         for (v1 in 0..pen) {
             val v2 = pen - v1
-            val i = R.count { v1 <= it}
-            val j = R.count { v2 <= it}
+            val i = part[v1]
+            val j = part[v2]
             if (v1 == 0 || v2 == 0) {
                 val a = mult(mult(m1, fact[n - 1]), min(i, j))
                 res = add(res, a)
