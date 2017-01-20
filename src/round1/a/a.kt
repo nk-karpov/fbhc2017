@@ -1,6 +1,9 @@
 package round1.a
 
-import java.io.*
+import java.io.BufferedReader
+import java.io.FileReader
+import java.io.FileWriter
+import java.io.PrintWriter
 import java.lang.Math.min
 import kotlin.system.measureNanoTime
 import kotlin.system.measureTimeMillis
@@ -15,7 +18,7 @@ fun main(args: Array<String>) {
             val time = measureNanoTime {
                 solve(input, output)
             }
-            println("$test = ${time/1e6}ms")
+            println("$test = ${time / 1e6}ms")
             output.flush()
         }
     }
@@ -27,8 +30,8 @@ fun main(args: Array<String>) {
 
 fun solve(input: BufferedReader, output: PrintWriter) {
     val (n, m) = input.readLine().split(' ').map(String::toInt)
-    val C = Array(n, { input.readLine().split(' ').map(String::toInt).sorted()})
-    val dp = Array(n + 1, {LongArray(n + 1, {Long.MAX_VALUE})})
+    val C = Array(n, { input.readLine().split(' ').map(String::toInt).sorted() })
+    val dp = Array(n + 1, { LongArray(n + 1, { Long.MAX_VALUE }) })
     dp[0][0] = 0
     for (i in C.indices) {
         for (j in dp[i].indices) {
