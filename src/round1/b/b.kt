@@ -17,7 +17,7 @@ fun main(args: Array<String>) {
         return Pair(block(), System.nanoTime() - start)
     }
 
-    class Point(val x: Int, val y: Int)
+    data class Point(val x: Int, val y: Int)
 
     class Input(val id: Int, val r: Int, val points: List<Point>)
 

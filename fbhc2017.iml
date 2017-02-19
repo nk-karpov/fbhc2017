@@ -13,6 +13,11 @@
                 <option name="moduleKind" value="plain" />
               </K2JSCompilerArguments>
             </option>
+            <option name="k2jvmCompilerArguments">
+              <K2JVMCompilerArguments>
+                <option name="jvmTarget" value="1.6" />
+              </K2JVMCompilerArguments>
+            </option>
             <option name="_commonCompilerArguments">
               <DummyImpl>
                 <option name="languageVersion" value="1.1" />
@@ -21,6 +26,7 @@
             </option>
           </KotlinCompilerInfo>
         </option>
+        <option name="useProjectSettings" value="false" />
         <option name="versionInfo">
           <KotlinVersionInfo>
             <option name="apiLevel" value="1.1" />
